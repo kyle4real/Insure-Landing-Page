@@ -1,0 +1,73 @@
+/* Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Karla:wght@400;700&display=swap");
+
+/* Variables */
+:root {
+    --header-height: 3rem;
+    /* Colors */
+    --dark-violet: hsl(256, 26%, 20%);
+    --grayish-blue: hsl(216, 30%, 68%);
+    --very-dark-violet: hsl(270, 9%, 17%);
+    --dark-grayish-violet: hsl(273, 4%, 51%);
+    --very-light-gray: hsl(0, 0%, 98%);
+    /* Typography */
+    --DM-Serif-Display: "DM Serif Display", serif;
+    --Karla: "Karla", sans-serif;
+    --big-font-size: 2.5rem;
+    --normal-font-size: 0.98rem;
+    /* Z-Index */
+    --z-fixed: 100;
+}
+
+@media screen and (max-width: 768px) {
+    :root {
+        --big-font-size: 5rem;
+        --normal-font-size: 1rem;
+    }
+}
+
+/* Base */
+*,
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: var(--header-height) 0 0 0;
+    padding: 0;
+    font-family: var(--DM-Serif-Display);
+    font-size: var(--normal-font-size);
+    font-weight: 400;
+}
+
+h1,
+p,
+ul {
+    margin: 0;
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+/* Layout */
+.bd-grid {
+    max-width: 1024px;
+    display: grid;
+    grid-template-columns: 100%;
+    column-gap: 2rem;
+    width: calc(100% - 2rem);
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
