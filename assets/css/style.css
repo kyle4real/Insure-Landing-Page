@@ -182,7 +182,6 @@ img {
 
 .nav__toggle,
 .nav__close {
-    /* border: 2px solid var(--very-dark-violet); */
     font-size: 1.5rem;
     padding: 3px;
     cursor: pointer;
@@ -254,11 +253,56 @@ main {
     color: var(--dark-violet);
 }
 
+/* CARDS */
+.cards {
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+    background: var(--very-light-gray);
+}
+.cards__container {
+    max-width: var(--max-width);
+    width: calc(100% - 3rem);
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    position: relative;
+}
+.card__header {
+    text-align: center;
+    font-size: 2.9rem;
+    margin-bottom: 5rem;
+}
+.card__list {
+    text-align: center;
+}
+.card:not(:last-child) {
+    margin-bottom: 3.8rem;
+}
+.card__title {
+    font-size: 2rem;
+    margin-bottom: 0.8rem;
+}
+.card__img {
+    width: 90px;
+}
+
+.cards__container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: calc(50% - 70px);
+    width: 140px;
+    height: 1px;
+    background: var(--dark-violet);
+}
+
 /* Media Queries */
 @media screen and (min-width: 768px) {
     body {
         margin: 0;
     }
+    /* NAV */
     .nav {
         height: var(--header-height);
     }
@@ -273,12 +317,16 @@ main {
         margin-left: 1.75rem;
         margin-bottom: 0;
     }
+    /* HERO */
     main {
+        background: var(--very-light-gray);
         margin-top: var(--header-height);
+        height: 300vh;
     }
     .hero {
         padding-top: 6.6rem;
         padding-bottom: 4rem;
+        margin-bottom: 9rem;
     }
     .hero__container {
         flex-direction: row;
@@ -322,16 +370,54 @@ main {
     .hero__img {
         position: absolute;
         right: 0;
-        width: 98%;
+        width: 94%;
+    }
+    /* CARDS */
+    .cards {
+        margin: 0;
+        padding-top: 10rem;
+        padding-bottom: 10rem;
+    }
+    .cards__container {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
+    .card__header {
+        font-size: 4.6rem;
+        line-height: 1;
+        text-align: start;
+        margin-bottom: 5.4rem;
+    }
+    .card__title {
+        margin-bottom: 0.8rem;
+    }
+    .card__description {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+    .card__list {
+        display: flex;
+        text-align: start;
+    }
+    .card:not(:last-child) {
+        margin-bottom: 0;
+        margin-right: 2rem;
+    }
+    .cards__container::before {
+        left: 0;
     }
 }
 
-@media screen and (min-width: 1366px) {
+@media screen and (min-width: 1112px) {
     .bd-grid {
         margin-left: auto;
         margin-right: auto;
     }
     .hero__container {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .cards__container {
         margin-left: auto;
         margin-right: auto;
     }
