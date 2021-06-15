@@ -44,6 +44,7 @@ body {
     font-family: var(--DM-Serif-Display);
     font-size: var(--normal-font-size);
     font-weight: 400;
+    background: var(--very-light-gray);
 }
 
 h1,
@@ -204,7 +205,7 @@ img {
 main {
     margin-top: var(--header-height-mobile);
     width: 100%;
-    height: 100vh;
+    height: 500vh;
 }
 
 /* Hero */
@@ -256,7 +257,7 @@ main {
 /* CARDS */
 .cards {
     padding-top: 10rem;
-    padding-bottom: 10rem;
+    /* padding-bottom: 10rem; */
     background: var(--very-light-gray);
 }
 .cards__container {
@@ -286,6 +287,11 @@ main {
 .card__img {
     width: 90px;
 }
+.card__description {
+    font-size: 1.05rem;
+    color: var(--dark-grayish-violet);
+    line-height: 1.6;
+}
 
 .cards__container::before {
     content: "";
@@ -295,6 +301,42 @@ main {
     width: 140px;
     height: 1px;
     background: var(--dark-violet);
+}
+/* CTA */
+.cta {
+    background: var(--very-light-gray);
+}
+.cta__container {
+    max-width: var(--max-width);
+    width: calc(100% - 3rem);
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    background: var(--dark-violet);
+    text-align: center;
+    padding: 4rem 2rem 4rem 2rem;
+}
+.cta__tagline {
+    font-size: 2.4rem;
+    color: var(--very-light-gray);
+    line-height: 1.1;
+    margin-bottom: 3rem;
+}
+.cta__btn {
+    font-family: var(--Karla);
+    border: 2px solid var(--very-light-gray);
+    background: transparent;
+    color: var(--very-light-gray);
+    text-transform: uppercase;
+    padding: 0.7rem 2rem;
+    cursor: pointer;
+    font-size: 1.05rem;
+    transition: all var(--speed) ease;
+}
+.cta__btn:hover {
+    background: var(--very-light-gray);
+    color: var(--dark-violet);
 }
 
 /* Media Queries */
@@ -321,7 +363,6 @@ main {
     main {
         background: var(--very-light-gray);
         margin-top: var(--header-height);
-        height: 300vh;
     }
     .hero {
         padding-top: 6.6rem;
@@ -376,7 +417,6 @@ main {
     .cards {
         margin: 0;
         padding-top: 10rem;
-        padding-bottom: 10rem;
     }
     .cards__container {
         padding-top: 4rem;
@@ -392,12 +432,14 @@ main {
         margin-bottom: 0.8rem;
     }
     .card__description {
-        font-size: 1rem;
-        line-height: 1.6;
+        font-size: 1.05rem;
     }
     .card__list {
         display: flex;
         text-align: start;
+    }
+    .card {
+        width: calc(calc(100% / 3)-4rem);
     }
     .card:not(:last-child) {
         margin-bottom: 0;
@@ -405,6 +447,24 @@ main {
     }
     .cards__container::before {
         left: 0;
+    }
+    /* CTA */
+    .cta__container {
+        text-align: start;
+        margin-top: 6rem;
+        margin-bottom: 6rem;
+        padding: 4.5rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .cta__tagline {
+        font-size: 3.2rem;
+        margin-bottom: 0;
+    }
+    .cta__btn {
+        padding: 0.6rem 2rem;
+        font-size: 1rem;
     }
 }
 
@@ -418,6 +478,10 @@ main {
         margin-right: auto;
     }
     .cards__container {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .cta__container {
         margin-left: auto;
         margin-right: auto;
     }
