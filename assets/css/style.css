@@ -356,6 +356,7 @@ main {
     border-bottom: 1px solid var(--dark-grayish-violet);
 }
 .footer__logo {
+    display: inline-block;
     width: 8rem;
     margin-bottom: 2rem;
 }
@@ -370,8 +371,11 @@ main {
 .social__icon:not(:last-child) {
     margin-right: 1rem;
 }
-.social__icon:hover .social__icon-overlay {
-    opacity: 1;
+.social__icon {
+    transition: all var(--speed) ease;
+}
+.social__icon:hover {
+    transform: scale(1.1);
 }
 
 .footer__bottom {
@@ -395,6 +399,10 @@ main {
 .footer__link {
     text-transform: uppercase;
     color: var(--dark-violet);
+    transition: all var(--speed) ease;
+}
+.footer__link:hover {
+    color: var(--dark-grayish-violet);
 }
 
 @media screen and (min-width: 768px) {
