@@ -44,7 +44,7 @@ body {
     font-family: var(--DM-Serif-Display);
     font-size: var(--normal-font-size);
     font-weight: 400;
-    background: var(--very-light-gray);
+    background: white;
 }
 
 h1,
@@ -85,6 +85,7 @@ img {
     left: 0;
     z-index: var(--z-fixed);
     background: var(--very-light-gray);
+    transition: all var(--speed) ease;
 }
 
 /* Nav */
@@ -95,6 +96,10 @@ img {
     align-items: center;
     color: var(--very-dark-violet);
     transition: all var(--speed) ease;
+}
+
+.fade-nav {
+    background: rgba(255, 255, 255, 0.9);
 }
 
 @media screen and (max-width: 768px) {
@@ -126,7 +131,10 @@ img {
 }
 
 .nav__logo {
-    font-size: 1.8rem;
+    /* font-size: 1.8rem; */
+    display: flex;
+    align-items: flex-end;
+    width: 8rem;
     transition: 0.3s ease all;
 }
 
@@ -256,8 +264,7 @@ main {
 /* CARDS */
 .cards {
     padding-top: 10rem;
-    /* padding-bottom: 10rem; */
-    background: var(--very-light-gray);
+    background: white;
 }
 .cards__container {
     max-width: var(--max-width);
@@ -303,7 +310,7 @@ main {
 }
 /* CTA */
 .cta {
-    background: var(--very-light-gray);
+    background: white;
 }
 .cta__container {
     max-width: var(--max-width);
@@ -339,7 +346,7 @@ main {
 }
 /* FOOTER */
 .footer {
-    background: white;
+    background: var(--very-light-gray);
 }
 
 .footer__container {
@@ -459,7 +466,7 @@ main {
     }
     /* HERO */
     main {
-        background: var(--very-light-gray);
+        /* background: var(--very-light-gray); */
         margin-top: var(--header-height);
     }
     .hero {

@@ -14,6 +14,26 @@ const menu = () => {
     navClose.addEventListener("click", handleMenu);
 };
 
+const nav = () => {
+    let state = { isTop: true };
+    const nav = document.getElementById("nav");
+
+    document.addEventListener("scroll", () => {
+        const y = window.scrollY;
+        if (y >= 100 && state.isTop) {
+            nav.classList.toggle("fade-nav");
+            state.isTop = false;
+            return;
+        }
+        if (y <= 100 && !state.isTop) {
+            nav.classList.toggle("fade-nav");
+            console.log("above");
+            state.isTop = true;
+            return;
+        }
+    });
+};
+
 const responsiveImg = () => {
     let state = { isDesktop: window.innerWidth < 768 };
 
@@ -40,6 +60,7 @@ const responsiveImg = () => {
 const main = () => {
     menu();
     responsiveImg();
+    nav();
 };
 
 document.addEventListener("DOMContentLoaded", () => {
