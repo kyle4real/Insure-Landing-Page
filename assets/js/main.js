@@ -57,10 +57,37 @@ const responsiveImg = () => {
     });
 };
 
+// GSAP ANIMATION
+const gsapFunc = () => {
+    // nav
+    gsap.from(".nav__logo, .nav__toggle", { opacity: 0, duration: 0.3, delay: 0.4, x: -30 });
+    gsap.from(".nav__item", { opacity: 0, duration: 0.5, delay: 0.6, x: 30, stagger: 0.2 });
+
+    // hero
+    gsap.from(".hero__data-header", { opacity: 0, duration: 0.5, delay: 1.5, x: -30 });
+    gsap.from(".hero__data-description", { opacity: 0, duration: 0.5, delay: 1.7, x: -30 });
+    gsap.from(".hero__data-btn", { opacity: 0, duration: 0.5, delay: 1.9, x: 0 });
+
+    // scroll
+    // gsap.registerPlugin(ScrollTrigger);
+    gsap.from(".card", {
+        scrollTrigger: {
+            trigger: ".card",
+            toggleActions: "restart none none none",
+            end: "top 100px",
+        },
+        opacity: 0,
+        x: 500,
+        stagger: 0.5,
+        duration: 0.5,
+    });
+};
+
 const main = () => {
     menu();
     responsiveImg();
     nav();
+    gsapFunc();
 };
 
 document.addEventListener("DOMContentLoaded", () => {
