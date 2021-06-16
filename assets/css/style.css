@@ -339,6 +339,8 @@ main {
     cursor: pointer;
     font-size: 1.05rem;
     transition: all var(--speed) ease;
+    position: relative;
+    z-index: 100;
 }
 .cta__btn:hover {
     background: var(--very-light-gray);
@@ -562,14 +564,23 @@ main {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        flex-wrap: nowrap;
     }
     .cta__tagline {
-        font-size: 3.2rem;
+        font-size: 2.8rem;
         margin-bottom: 0;
+        position: relative;
+        z-index: 100;
     }
     .cta__btn {
         padding: 0.6rem 2rem;
         font-size: 1rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .cta__tagline {
+        font-size: 3.2rem;
     }
 }
 
@@ -589,5 +600,63 @@ main {
     .cta__container {
         margin-left: auto;
         margin-right: auto;
+    }
+}
+
+/* BG PATTERNS */
+.hero {
+    position: relative;
+}
+#bg-pattern-intro-right-desktop {
+    display: none;
+}
+#bg-pattern-intro-left-desktop {
+    display: none;
+}
+.cta__container {
+    position: relative;
+    overflow: hidden;
+}
+#bg-pattern-how-we-work-desktop {
+    display: none;
+}
+.footer {
+    position: relative;
+}
+.footer__container {
+    position: relative;
+    z-index: 1;
+}
+#bg-pattern-footer-desktop {
+    display: none;
+}
+@media screen and (min-width: 768px) {
+    #bg-pattern-intro-right-desktop {
+        display: block;
+        position: absolute;
+        width: 26%;
+        right: 0;
+        top: 0;
+        z-index: 10;
+    }
+    #bg-pattern-intro-left-desktop {
+        display: block;
+        position: absolute;
+        width: 220px;
+        bottom: -62%;
+        left: 0;
+    }
+    #bg-pattern-how-we-work-desktop {
+        display: block;
+        position: absolute;
+        width: 450px;
+        top: 0;
+        right: 0;
+    }
+    #bg-pattern-footer-desktop {
+        display: block;
+        position: absolute;
+        width: 600px;
+        z-index: 0;
     }
 }
