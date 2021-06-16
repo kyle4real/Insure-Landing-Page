@@ -1,8 +1,5 @@
 ## Table of contents
 
--   [Screenshots](#screenshots)
-    -   [Desktop](#desktop)
-    -   [Mobile](#mobile)
 -   [Overview](#overview)
     -   [The challenge](#the-challenge)
     -   [Links](#links)
