@@ -670,9 +670,11 @@ main {
     position: relative;
     z-index: 5;
 }
-.hero__img {
-    position: relative;
-    z-index: 10;
+@media screen and (max-width: 767px) {
+    .hero__img {
+        position: relative;
+        z-index: 10;
+    }
 }
 #bg-pattern-intro-left-mobile {
     display: block;
