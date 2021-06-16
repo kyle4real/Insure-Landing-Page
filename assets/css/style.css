@@ -500,7 +500,7 @@ main {
     }
     .hero__data h1 {
         line-height: 1.1;
-        font-size: 4rem;
+        font-size: 3.2rem;
     }
     .hero__data p {
         margin-top: 1.4rem;
@@ -582,6 +582,10 @@ main {
     .cta__tagline {
         font-size: 3.2rem;
     }
+    .hero__data h1 {
+        line-height: 1.1;
+        font-size: 4rem;
+    }
 }
 
 @media screen and (min-width: 1112px) {
@@ -603,7 +607,7 @@ main {
     }
 }
 
-/* BG PATTERNS */
+/* BG PATTERNS DESKTOP */
 .hero {
     position: relative;
 }
@@ -634,10 +638,10 @@ main {
     #bg-pattern-intro-right-desktop {
         display: block;
         position: absolute;
-        width: 26%;
+        width: 400px;
         right: 0;
-        top: 0;
-        z-index: 10;
+        top: -40px;
+        z-index: 11;
     }
     #bg-pattern-intro-left-desktop {
         display: block;
@@ -658,5 +662,54 @@ main {
         position: absolute;
         width: 600px;
         z-index: 0;
+    }
+}
+
+/* BG PATTERNS MOBILE */
+.hero__data {
+    position: relative;
+    z-index: 5;
+}
+.hero__img {
+    position: relative;
+    z-index: 10;
+}
+#bg-pattern-intro-left-mobile {
+    display: block;
+    position: absolute;
+    width: 200px;
+    top: -10px;
+    left: -1.5rem;
+    z-index: -1;
+}
+#bg-pattern-intro-right-mobile {
+    display: block;
+    position: absolute;
+    width: 125px;
+    bottom: -180px;
+    right: 0;
+}
+.cta__tagline {
+    position: relative;
+}
+#bg-pattern-how-we-work-mobile {
+    display: block;
+    position: absolute;
+    width: 165px;
+    top: 0;
+    right: 0;
+}
+#bg-pattern-footer-mobile {
+    display: block;
+    position: absolute;
+    top: 0;
+}
+
+@media screen and (min-width: 768px) {
+    #bg-pattern-intro-left-mobile,
+    #bg-pattern-intro-right-mobile,
+    #bg-pattern-how-we-work-mobile,
+    #bg-pattern-footer-mobile {
+        display: none;
     }
 }
